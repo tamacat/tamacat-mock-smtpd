@@ -20,5 +20,5 @@ docker build -t tamacat-mock-smtpd .
 
 Docker run mock-smtpd (Port: 25/tcp)
 ```sh
-docker run --rm -it -d -t tamacat-mock-smtpd
+docker run --rm -it -d -p 25:25 -t tamacat-mock-smtpd
 ```

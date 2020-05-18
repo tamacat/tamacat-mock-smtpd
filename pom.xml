@@ -28,7 +28,7 @@
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
     <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ssZ</maven.build.timestamp.format>
-    <tamacat.version>[1.4,2.0)</tamacat.version>
+    <tamacat.version>1.4</tamacat.version>
   </properties>
 
   <dependencies>

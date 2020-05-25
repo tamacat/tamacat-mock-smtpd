@@ -6,7 +6,7 @@
     </property>
   </bean>
 
-  <bean id="smtpd" class="org.tamacat.smtpd.SMTPd" />
+  <bean id="smtpd" class="org.tamacat.smtpd.SMTPdEmbedded" />
 
   <bean id="server" class="org.tamacat.httpd.core.UnifiedHttpEngine">
     <property name="propertiesName">

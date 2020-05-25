@@ -3,11 +3,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
 											http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.tamacat.httpd</groupId>
-  <artifactId>tamacat-mock-smtpd</artifactId>
+  <groupId>org.tamacat.smtpd</groupId>
+  <artifactId>tamacat-blackhole-smtpd</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
-  <name>tamacat-mock-smtpd</name>
+  <name>tamacat-blackhole-smtpd</name>
   <url>http://tamacat.org/</url>
   <licenses>
     <license>
@@ -18,9 +18,9 @@
   </licenses>
 
   <scm>
-    <url>https://github.com/tamacat/tamacat-mock-smtpd.git</url>
-    <connection>scm:https://github.com/tamacat-mock-smtpd.git</connection>
-    <developerConnection>scm:https://github.com/tamacat/tamacat-mock-smtpd.git</developerConnection>
+    <url>https://github.com/tamacat/tamacat-blackhole-smtpd.git</url>
+    <connection>scm:https://github.com/tamacat-blackhole-smtpd.git</connection>
+    <developerConnection>scm:https://github.com/tamacat/tamacat-blackhole-smtpd.git</developerConnection>
   </scm>
 
   <properties>
@@ -47,7 +47,7 @@
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
-      <version>4.5.11</version>
+      <version>4.5.12</version>
       <scope>test</scope>
     </dependency>
     
@@ -152,7 +152,7 @@
         <artifactId>maven-assembly-plugin</artifactId>
         <version>3.0.0</version>
         <configuration>
-          <finalName>tamacat-mock-smtpd-${project.version}</finalName>
+          <finalName>tamacat-blackhole-smtpd-${project.version}</finalName>
           <descriptorRefs>
             <descriptorRef>jar-with-dependencies</descriptorRef>
           </descriptorRefs>

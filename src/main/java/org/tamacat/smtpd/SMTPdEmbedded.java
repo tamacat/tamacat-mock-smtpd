@@ -18,9 +18,18 @@
  ****************************************************************/
 package org.tamacat.smtpd;
 
-public class SMTPd {
-	
-	public static void main(String[] args) {
-		new MockSMTPServer().start();
+import org.tamacat.httpd.middleware.Middleware;
+
+public class SMTPdEmbedded implements Middleware {
+	MockSMTPServer server = new MockSMTPServer();
+
+	@Override
+	public void startup() {
+		server.start();
+	}
+
+	@Override
+	public void shutdown() {
+		server.stop();
 	}
 }

@@ -2,18 +2,6 @@
 <beans>
   <bean id="AccessLogFilter" class="org.tamacat.httpd.filter.AccessLogFilter" />
 
-  <bean id="ThymeleafHandler" class="org.tamacat.httpd.handler.ThymeleafHttpHandler">
-    <property name="docsRoot">
-      <value>${server.home}/src/main/resources/htdocs/root/</value>
-    </property>
-    <property name="httpFilter">
-      <ref bean="AccessLogFilter" />
-    </property>
-    <property name="listings">
-      <value>false</value>
-    </property>
-  </bean>
-
   <bean id="ReverseHandler" class="org.tamacat.httpd.handler.ReverseProxyHandler">
     <property name="httpFilter">
       <ref bean="AccessLogFilter" />

@@ -1,24 +1,37 @@
 # tamacat-blackhole-smtpd
 
-Blackhole smtp server
+Blackhole SMTP server written in Java
 
 Reference code:
-* James Mock SMTP server
-https://github.com/apache/james-project/tree/master/server/mailet/mock-smtp-server
+  * James Mock SMTP server
+  * https://github.com/apache/james-project/tree/master/server/mailet/mock-smtp-server
 
 ## How to run tamacat-blackhole-smtpd in Docker
-Maven build (create jar with dependencies)
+
+### DockerHub: tamacat/tamacat-blackhole-smtpd
+* https://hub.docker.com/repository/docker/tamacat/tamacat-blackhole-smtpd
+
+### Docker run (0.0.0.0:1025->25/tcp)
+
+```sh
+docker run --rm -it -d -p 1025:25 -t tamacat/tamacat-blackhole-smtpd
+```
+
+
+## Create a Docker Image from Source Code
+
+### Download Source Code
+```sh
+git clone https://github.com/tamacat/tamacat-blackhole-smtpd.git
+```
+
+### Maven build (create jar with dependencies)
 ```sh
 mvn package
 ```
 
-
-Docker build
+### Docker build
 ```sh
-docker build -t tamacat-blackhole-smtpd .
+docker build -t tamacat/tamacat-blackhole-smtpd .
 ```
 
-Docker run mock-smtpd (Container port: 25/tcp)
-```sh
-docker run --rm -it -d -p 1025:25 -t tamacat-blackhole-smtpd
-```

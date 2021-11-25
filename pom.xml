@@ -8,7 +8,7 @@
   <version>1.0</version>
   <packaging>jar</packaging>
   <name>tamacat-blackhole-smtpd</name>
-  <url>http://tamacat.org/</url>
+  <url>https://tamacat.org/</url>
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
@@ -28,7 +28,7 @@
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
     <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ssZ</maven.build.timestamp.format>
-    <tamacat.version>1.4</tamacat.version>
+    <tamacat.version>1.5</tamacat.version>
   </properties>
 
   <dependencies>
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpcore</artifactId>
-      <version>4.4.13</version>
+      <version>4.4.14</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -60,17 +60,17 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>1.7.30</version>
+      <version>1.7.32</version>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-core</artifactId>
-      <version>1.2.3</version>
+      <version>1.2.7</version>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>1.2.3</version>
+      <version>1.2.7</version>
     </dependency>
   </dependencies>
 

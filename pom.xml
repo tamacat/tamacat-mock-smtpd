@@ -54,7 +54,7 @@
     <dependency>
       <groupId>org.apache.james</groupId>
       <artifactId>mock-smtp-server</artifactId>
-      <version>3.4.0</version>
+      <version>3.6.0</version>
     </dependency>
 
     <dependency>

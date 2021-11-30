@@ -31,7 +31,6 @@ import org.apache.james.core.MailAddress;
 import org.apache.james.mock.smtp.server.model.Mail;
 import org.apache.james.mock.smtp.server.model.MockSMTPBehavior;
 import org.apache.james.mock.smtp.server.model.MockSMTPBehaviorInformation;
-import org.apache.james.mock.smtp.server.model.Response;
 import org.apache.james.mock.smtp.server.model.SMTPCommand;
 import org.apache.james.mock.smtp.server.model.Response.SMTPStatusCode;
 import org.subethamail.smtp.MessageHandler;
@@ -62,10 +61,10 @@ public class MockMessageHandler implements MessageHandler {
 
         @Override
         public void behave(T input) throws RejectException {
-            Response response = behavior.getResponse();
-            if (response.isServerRejected()) {
-                throw new RejectException(response.getCode().getRawCode(), response.getMessage());
-            }
+            //Response response = behavior.getResponse();
+            //if (response.isServerRejected()) {
+            //    throw new RejectException(response.getCode().getRawCode(), response.getMessage());
+            //}
             throw new NotImplementedException("Not rejecting commands in mock behaviours is not supported yet");
         }
     }
@@ -114,7 +113,7 @@ public class MockMessageHandler implements MessageHandler {
         Optional<Behavior<MailAddress>> recipientBehavior = firstMatchedBehavior(SMTPCommand.RCPT_TO, recipient);
 
         recipientBehavior
-            .orElseGet(() -> envelopeBuilder::addRecipient)
+            .orElseGet(() -> envelopeBuilder::addRecipientMailAddress)
             .behave(parse(recipient));
     }
 

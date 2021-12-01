@@ -113,7 +113,7 @@ public class MockMessageHandler implements MessageHandler {
         Optional<Behavior<MailAddress>> recipientBehavior = firstMatchedBehavior(SMTPCommand.RCPT_TO, recipient);
 
         recipientBehavior
-            .orElseGet(() -> envelopeBuilder::addRecipientMailAddress)
+            .orElseGet(() -> envelopeBuilder::addRecipient)
             .behave(parse(recipient));
     }
 

@@ -1,7 +1,10 @@
 # tamacat-blackhole-smtpd
 
 Blackhole SMTP server written in Java
-
+  * Do not send email.
+  * Do not save to memory or disk.
+  * Logging for tracing.
+  
 Reference code:
   * James Mock SMTP server
   * https://github.com/apache/james-project/tree/master/server/mailet/mock-smtp-server
@@ -9,7 +12,7 @@ Reference code:
 ## How to run tamacat-blackhole-smtpd in Docker
 
 ### DockerHub: tamacat/tamacat-blackhole-smtpd
-* https://hub.docker.com/repository/docker/tamacat/tamacat-blackhole-smtpd
+* https://hub.docker.com/r/tamacat/tamacat-blackhole-smtpd
 
 ### Docker run (0.0.0.0:1025->25/tcp)
 

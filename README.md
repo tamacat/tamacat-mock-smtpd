@@ -1,9 +1,9 @@
 # tamacat-blackhole-smtpd
 
 Blackhole SMTP server written in Java
-  * Do not send email.
-  * Do not save to memory or disk.
-  * Logging for tracing.
+  * Emails cannot be sent.
+  * Emails cannot be stored on disk or memory.
+  * Emails can write logs only.
   
 Reference code:
   * James Mock SMTP server

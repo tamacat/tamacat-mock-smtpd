@@ -34,10 +34,16 @@
   <dependencies>
     <dependency>
       <groupId>org.tamacat</groupId>
-      <artifactId>tamacat-httpd</artifactId>
+      <artifactId>tamacat-core</artifactId>
       <version>${tamacat.version}</version>
     </dependency>
- 
+    
+    <dependency>
+      <groupId>org.tamacat</groupId>
+      <artifactId>tamacat-httpd</artifactId>
+      <version>${tamacat.version}</version>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpcore</artifactId>

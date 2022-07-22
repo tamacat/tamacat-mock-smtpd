@@ -38,3 +38,7 @@ mvn package
 docker build -t tamacat/tamacat-blackhole-smtpd .
 ```
 
+### Maven Jib build Container Image and Push Container Registry.
+```sh
+mvn compile jib:build
+```

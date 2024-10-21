@@ -60,7 +60,7 @@
     <dependency>
       <groupId>org.apache.james</groupId>
       <artifactId>mock-smtp-server</artifactId>
-      <version>3.4.0</version>
+      <version>3.5.0</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.commons</groupId>
@@ -109,7 +109,7 @@
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-server</artifactId>
-      <version>10.0.22</version>
+      <version>12.0.12</version>
     </dependency>
 
     <dependency>
